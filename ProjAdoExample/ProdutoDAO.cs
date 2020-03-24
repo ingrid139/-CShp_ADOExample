@@ -12,7 +12,8 @@ namespace ProjAdoExample
         public ProdutoDAO()
         {
             //provider - especificas do banco de dados - SqlConnection = Para SQL Server
-            _conexao = new SqlConnection("Server=(localdb)\\mssqllocaldb;Database=LojaDb;Trusted_Connection=True");
+            _conexao = new SqlConnection("Server=localhost,1433;Database=LojaDB;User ID=sa;Password=Ing@2020;Trusted_Connection=False");
+           _conexao.Open();
         }
 
         // CRUD - Create, Read, Update e Delete
